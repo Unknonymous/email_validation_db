@@ -1,0 +1,65 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: solid 1px black;
+}
+body{
+    background-color: rgb(85, 166, 241);
+}
+#wrapper{
+    width: 900px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+#Tlabel{
+    color: blueviolet;
+    text-align: center;
+}
+#eform{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+.flashes{
+    background-color: red;
+    color: lime;
+    font-weight: bold;
+    text-align: center;
+}
+#toprow{
+    font-size: 1.4em;
+    color: white;
+    text-decoration: underline;
+}
+#results{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    color: lightskyblue;
+}
+#success{
+    height: 75px;
+    width: 350px;
+    background-color: green;
+    color: white;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#corner{
+    text-align: right;
+}
+#low{
+    background-color: black;
+    color: red;
+}

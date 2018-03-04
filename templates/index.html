@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='styles.css') }}">
+    <title>E-valid w/DB</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h1 id='Tlabel'>Enter your email to see if we know you.</h1>
+        
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class = flashes>
+                {% for message in messages %}
+                    <h2>{{ message }}</h2>
+                {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        
+        <form id='eform' action='/check' method="POST">
+            Email Address: <input type="text" name="email">
+            <input type="submit" text="Submit" class="btnstyle">
+        </form>
+    </div><!--closes wrapper-->
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='styles.css') }}">
+    <title>E-valid w/DB</title>
+</head>
+<body>
+    <div id="wrapper">
+
+        <div id="success">
+            <p>
+                The email address you entered, {{ email }} is a VALID email address.  Thank You!
+            </p>
+        </div><!--closes success-->
+
+        <table id='results'>
+        <tr>
+            <th id='toprow'>Email Addresses Entered</th>
+            <th> </th>
+        </tr>
+    
+        {% for email in contains %}
+        <tr>
+            <td>{{email['email']}}</td>
+            <td>{{email['when']}}</td>
+        </tr>
+        {% endfor %}
+        </table><!--closes results-->
+
+        <form action="/" method="POST" id='corner'>
+            <input id="low" type="submit" value="Again" />
+        </form>
+
+        <!-- {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class = flashes>
+                {% for message in messages %}
+                    <h2>{{ message }}</h2>
+                {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %} -->
+        
+        
+    </div><!--closes wrapper-->
+</body>
+</html>
